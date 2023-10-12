@@ -11,7 +11,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://welovemovies-catalog-client.netlify.app",
+    origin: "*",
   })
 );
 app.use(express.json());
