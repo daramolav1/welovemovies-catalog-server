@@ -9,7 +9,11 @@ const errorHandler = require("./errors/errorHandler");
 
 const app = express();
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://welovemovies-catalog-client.netlify.app",
+  })
+);
 app.use(express.json());
 
 app.use("/movies", moviesRouter);
